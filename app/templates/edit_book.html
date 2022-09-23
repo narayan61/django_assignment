@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Edit Book{% endblock title %}
+{% block main-content %}
+     <form method="POST">
+        {% csrf_token %}
+        {{ edit_book.as_p }}
+        <input type= "submit" value="edit">
+     </form>
+
+{% endblock main-content %}

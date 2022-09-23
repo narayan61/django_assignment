@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+<!doctype html>
+<html lang="en">
+  {% block head %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+
+    <title>BLOGS</title>
+    
+    
+  {% endblock %}
+
+{% block main-content%}
+<center>
+
+<div class="container mx-10 ">
+ <div class="col-md-6 my-5 ">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+         
+          <h3 class="mb-0">{{book.bookname}}</h3>
+          <div class="mb-1 text-muted">{{book.author}}</div>
+          <div class="mb-1 text-muted">{{book.catagory}}</div>
+          <p> <b>posted by </b>{{ book.user_id.username }}</p>
+          <p class="card-text mb-auto">{{book.discription}}</p>
+          
+        </div>
+
+      </div>
+    </div>
+</div>    
+{% endblock main-content %}
